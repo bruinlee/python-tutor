@@ -1,0 +1,116 @@
+7.3 numbers
+integers and floats
+Note: there is no long type, the int type can be an integet of any size!(not like c)
+
+7.4 Strings
+'' "" (no difference)
+multi-line strings """ or '''  (can also be used as comment)
+Strings are immutable
+  the format method
+age = 24
+name = "xiang"
+  print '{0} was {1} years old when he wrote this'.format(name,age)
+or
+  print '{} was {} years old when he wrote this'.format(name,age)
+#using string concatenation is uglier and error-pron
+  7.4.7 raw string
+	r"newlines are indicated by \n"
+	always use raw strings when dealing with regular expressions
+
+7.8 Object
+everything is an object in python
+
+7.11 logical and physical line
+use \ to concatenate multilines
+
+chapter 8---------------------------------------
+8.3 evaluation order
+8.4 changing the order of evaluation
+
+chapter 9---------------------------------------
+9.1 if 
+no "switch", use if else... or dictionary to do it
+9.2 while/for loop
+can have an else clause for the while loop
+while asdfasf:
+	
+else:
+	
+
+chapter 10--------------------------------------
+10.2 variable scope
+
+10.3 global statement
+x = 50
+def func():
+	global x
+	print 'x is', x
+	x = 2
+	print 'changed global x to', x
+10.4 default argument value
+def say(message, times=1):
+	
+say("asd")
+say("saf", 3)
+
+def func(a, b=5) is valid
+def func(a=5, b) is not valid
+10.5 keyword arguments
+def func(a, b=5, c=10):
+	sdfadsaf
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+10.6 VarArgs parameters
+def total(initial=5, *numbers, **keywords):
+	count = initial
+	for number in numbers:
+		count += number
+	for key in keywords:
+		count += keywords[key]
+	return count
+print total(10, 1, 2, 3, vegetables=50, fruits=100)
+def doNothing():
+	pass
+10.8 docstring
+def print_max(x, y):
+	'''prints the maximun of two numbers.
+	The two values must be integers.'''
+	# convert to integers, if possible
+	x = int(x)
+	y = int(y)
+
+	if x > y:
+	print x, 'is maximum'
+	else:
+	print y, 'is maximum'
+
+
+print_max.__doc__
+help(print_max)
+
+chapter 11-----------------------------------
+11.5 dir() del
+11.6 packages
+
+chapter 12---------------------
+list, tuple, dictionary, set
+list
+shoplist = ['apple', 'mango', 'carrot']
+
+tuple is immutable
+zoo=('python', 'elephant')
+Tuple with 0 or 1 items
+myempty= ()
+singleton= (2, )
+
+dictionary
+d={key1: value1, key2: value2 }
+
+set
+bri=set(['brazil', 'russia', 'india'])
+
+membership test--- in/ not in
+12.7 reference
+make full copy of a list, use the slicing operation to make a copy
+mylist = shoptlist[:]
